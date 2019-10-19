@@ -1,0 +1,94 @@
+/********************* Colour reference chart****************
+*************************** comment ********* colour ******** 
+
+dark purple #411081
+light purple #ede2fc
+very light purple #faf5fc
+dark gray #333333
+outline and lines #cccccc
+
+*/
+p {
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+}
+
+#app {
+    background-color: #faf5fc;
+    width: 100%;
+    height: 10000px;
+}
+
+.main-content {
+    height: 100%;
+}
+
+.navbar-custom {
+    background-color: #411081;
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    position: fixed !important;
+}
+
+.navbar-custom .nav-item {
+    color: #faf5fc;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 16%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #faf5fc;
+    overflow-x: hidden; 
+    padding-top: 70px;
+    border-right: 1px solid #cccccc;
+}
+
+.sidenav .btn {
+    
+    border-radius: 0px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333333;
+    font-family: 'Oxygen', sans-serif;
+    display: block;
+    background-color: #faf5fc;
+    border: none;
+    text-align: left !important;
+}
+
+.sidenav .btn p{
+    margin-left:10px;
+    padding-left: 30px;
+}
+
+.sidenav .btn:hover {
+    background-color: #ede2fc !important;
+    color: #411081 !important;
+}
+
+.sidenav .btn .selected{
+    background-color: #ede2fc !important;
+    color: #411081 !important;
+}
+  
+.nonlogout{
+    margin-top: 5px !important;
+}
+
+.logout{
+    margin-top: 65vh !important;
+} 
+
+.btn img{
+    float:left;
+}
