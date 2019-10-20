@@ -109,8 +109,8 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
-  width: 30%;
+  margin-top: 8%;
+  width: 20%;
   margin-bottom: 4%;
 }
 
@@ -176,5 +176,9 @@ p {
 
 .loginbox#login{
   height:370px;
+}
+
+.loginbox .errorText{
+  color:red;
 }
 

@@ -8,7 +8,10 @@ class SignupForm extends React.Component {
     super(props);
 
     this.state = {
-      errors: {},
+      error: {
+        email: "",
+        password: "",  
+      },
       user: {
         name: "",
         email: "",
@@ -48,8 +51,18 @@ class SignupForm extends React.Component {
   }
 
   submitSignup(){
-    // add to db, update state and upwards
-    console.log(this.state.user)
+    // add to db, update state and upwards loading, etc... (while in loading state, disable form fields)
+    const a = false;
+    if (a) {
+      console.log(this.state.user)
+    } else {
+      let error = this.state.error
+      error.email = "Email in use"
+      this.setState({
+        error: error
+      });
+    }
+    return false;
   }
 
   changeForm(){
@@ -58,25 +71,31 @@ class SignupForm extends React.Component {
 
   render() {
     let form;
+    let emailError;
+    let passwordError;
     if (!this.state.hasAccount) {
+      if (this.state.error.email) {
+        emailError = "Error: " + this.state.error.email;
+      }
+      console.log(emailError)
       form = 
         <div className="loginbox" id="signup">
           <h1>Register for an Account</h1>
-          <Form className="signupform" onSubmit={this.submitSignup}>
+          <Form className="signupform" >
             <Form.Group value={this.state.username} onChange={this.handleChange} onClick={this.handleFormClick}>
               <Form.Label>Your Name</Form.Label>
               <Form.Control required="required" name="username"/>
             </Form.Group>
             <Form.Group value={this.state.email} onChange={this.handleChange} onClick={this.handleFormClick}>
-              <Form.Label>Email Address</Form.Label>
-              <Form.Control required="required" type="email" name="email"/>
+              <Form.Label>Email Address &nbsp;&nbsp;&nbsp;&nbsp;<span class='errorText'><b>{emailError}</b></span></Form.Label>
+              <Form.Control required="required" type="email"  name="email"/>
             </Form.Group>
             <Form.Group value={this.state.password} onChange={this.handleChange} onClick={this.handleFormClick}>
               <Form.Label>Password (minimum 6 characters)</Form.Label>
               <Form.Control required="required" type="password" name="password" pattern=".{6,}"/>
             </Form.Group>
             <div className="buttoncontainer">
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="button" onClick={this.submitSignup}>
                 Submit
               </Button>
             </div>
@@ -84,6 +103,9 @@ class SignupForm extends React.Component {
           <p>Have an account? <a href='#' onClick={this.changeForm}>Log in</a></p>
         </div>
     } else {
+      if (this.state.error.password) {
+        passwordError = "Error: " + this.state.error.password;
+      }
       form = 
         <div className="loginbox" id="login">
           <h1>Login to Your Account</h1>
@@ -93,11 +115,11 @@ class SignupForm extends React.Component {
               <Form.Control type="email" name="email"/>
             </Form.Group>
             <Form.Group value={this.state.password} onChange={this.handleChange} onClick={this.handleFormClick}>
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Password &nbsp;&nbsp;&nbsp;&nbsp;<span class='errorText'><b>{passwordError}</b></span></Form.Label>
               <Form.Control type="password" name="password"/>
             </Form.Group>
             <div className="buttoncontainer">
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="button" onClick={this.submitSignup}>
                 Submit
               </Button>
             </div>
