@@ -6,89 +6,175 @@ light purple #ede2fc
 very light purple #faf5fc
 dark gray #333333
 outline and lines #cccccc
+white #FFFFFF
 
 */
 p {
-    margin-block-start: 0em !important;
-    margin-block-end: 0em !important;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
 }
 
 #app {
-    background-color: #faf5fc;
-    width: 100%;
-    height: 10000px;
+  background-color: #faf5fc;
+  width: 100%;
+  height: 100%;
 }
 
 .main-content {
-    height: 100%;
+  height: 100%;
 }
 
 .navbar-custom {
-    background-color: #411081;
-    height: 50px;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-    position: fixed !important;
+  background-color: #411081;
+  height: 50px;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  position: fixed !important;
 }
 
 .navbar-custom .nav-item {
-    color: #faf5fc;
-    padding-top: 2px;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-family: 'Oxygen', sans-serif;
+  color: #faf5fc;
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: 'Oxygen', sans-serif;
 }
 
 .sidenav {
-    height: 100%;
-    width: 16%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #faf5fc;
-    overflow-x: hidden; 
-    padding-top: 70px;
-    border-right: 1px solid #cccccc;
+  height: 100%;
+  width: 16%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #faf5fc;
+  overflow-x: hidden; 
+  padding-top: 70px;
+  border-right: 1px solid #cccccc;
 }
 
 .sidenav .btn {
-    
-    border-radius: 0px;
-    padding: 5px 10px 5px 10px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #333333;
-    font-family: 'Oxygen', sans-serif;
-    display: block;
-    background-color: #faf5fc;
-    border: none;
-    text-align: left !important;
+  
+  border-radius: 0px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333333;
+  font-family: 'Oxygen', sans-serif;
+  display: block;
+  background-color: #faf5fc;
+  border: none;
+  text-align: left !important;
 }
 
 .sidenav .btn p{
-    margin-left:10px;
-    padding-left: 30px;
+  margin-left:10px;
+  padding-left: 30px;
 }
 
 .sidenav .btn:hover {
-    background-color: #ede2fc !important;
-    color: #411081 !important;
+  background-color: #ede2fc !important;
+  color: #411081 !important;
 }
 
 .sidenav .btn .selected{
-    background-color: #ede2fc !important;
-    color: #411081 !important;
+  background-color: #ede2fc !important;
+  color: #411081 !important;
 }
   
 .nonlogout{
-    margin-top: 5px !important;
+  margin-top: 5px !important;
 }
 
 .logout{
-    margin-top: 65vh !important;
+  margin-top: 65vh !important;
 } 
 
 .btn img{
-    float:left;
+  float:left;
 }
+
+.signinbackground{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(180deg, #3700AD 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #4C5896 0%, rgba(255, 255, 255, 0) 100%), #9FA6E6;
+}
+
+.signinbackground #logo{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  width: 30%;
+  margin-bottom: 4%;
+}
+
+.loginbox{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin-top: 0;
+}
+
+.loginbox h1{
+  top: 20px;
+  padding-top: 30px;
+  font-family: 'Oxygen', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.loginbox .signupform{
+  text-align: left;
+  margin: 5px auto;
+  width: 80%;
+  font-family: 'Oxygen', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom:10px;
+  border-bottom:1px solid #cccccc;
+}
+
+.loginbox .form-group{
+  margin: 0px;
+}
+
+.loginbox .form-label{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+}
+
+.loginbox .buttoncontainer{
+  text-align: center;
+}
+
+.loginbox .btn{
+  width:20vw;
+  margin-top: 25px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom:10px;
+}
+
+.loginbox p {
+  font-family: 'Oxygen', sans-serif;
+}
+
+.loginbox#signup{
+  height:450px;
+}
+
+.loginbox#login{
+  height:370px;
+}
+

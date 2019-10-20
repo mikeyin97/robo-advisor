@@ -13,7 +13,7 @@ const Tab = (props) => {
 class Sidebar extends React.Component {
   render() {
     return (
-        <div class="sidenav">
+        <div className="sidenav">
             <Tab name="Home"></Tab>
             <Tab name="Analyzer"></Tab>
             <Tab name="Enhancer"></Tab>
