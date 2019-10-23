@@ -48,7 +48,6 @@ p {
   top: 0;
   left: 0;
   background-color: #faf5fc;
-  overflow-x: hidden; 
   padding-top: 70px;
   border-right: 1px solid #cccccc;
 }
@@ -87,11 +86,15 @@ p {
 }
 
 .logout{
-  margin-top: 65vh !important;
+  margin-top: 25px !important;
 } 
 
 .btn img{
   float:left;
+}
+
+.submit{
+  width: 10% !important;
 }
 
 .signinbackground{
@@ -182,3 +185,70 @@ p {
   color:red;
 }
 
+.mainContent{
+  display: block;
+  height: 100%;
+  width: 84%;
+  margin-left: 16%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #faf5fc;
+  padding-top: 70px;
+}
+
+.mainContent .homepage{
+  margin-left:2%;
+  margin-right:2%
+}
+
+.mainContent .analyzer{
+  margin-left:2%;
+  margin-right:2%
+}
+
+.mainContent .builder{
+  margin-left:2%;
+  margin-right:2%
+}
+
+.mainContent .enhancer{
+  margin-left:2%;
+  margin-right:2%
+}
+
+.mainContent h1{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 56px;
+}
+
+.mainContent h3{
+  font-family: Oxygen;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 56px;
+}
+
+.mainContent h2{
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 30px; 
+  font-weight: 300;
+  margin-top:20px;
+  margin-bottom:-30px;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+}
+
+.mainContent h2:hover{
+  color: #7a33ff !important;
+  cursor: pointer;
+}
+
+.navbar #logo:hover{
+  cursor: pointer;
+}
