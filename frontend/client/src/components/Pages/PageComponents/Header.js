@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
-import logo from '../images/logo.png'
-import personicon from '../images/personicon.png'
+import logo from '../../../images/logo.png'
+import personicon from '../../../images/personicon.png'
 
 const LoggedInView = props => {
   if (props.currentUser) {

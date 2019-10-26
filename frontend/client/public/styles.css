@@ -53,9 +53,8 @@ p {
 }
 
 .sidenav .btn {
-  
   border-radius: 0px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 15px;
   text-decoration: none;
   font-size: 18px;
   color: #333333;
@@ -88,6 +87,10 @@ p {
 .logout{
   margin-top: 25px !important;
 } 
+
+.iconimg{
+  margin-top:-2px;
+}
 
 .btn img{
   float:left;
@@ -185,70 +188,198 @@ p {
   color:red;
 }
 
+.background{
+  float: left;
+  width: 100%;
+  height: 100vh;
+  background-color: #faf5fc;
+  overflow: scroll;
+ 
+}
+
 .mainContent{
-  display: block;
-  height: 100%;
+  float: left;
   width: 84%;
   margin-left: 16%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 100vh;
   background-color: #faf5fc;
   padding-top: 70px;
+  height: 100%;
 }
 
-.mainContent .homepage{
-  margin-left:2%;
-  margin-right:2%
+.mainContent .content{
+  margin-left:3%;
+  margin-right:3%
 }
 
-.mainContent .analyzer{
-  margin-left:2%;
-  margin-right:2%
+.portform{
+  margin-top:20px;
+  margin-right:20px;
+  margin-left:10px;
+  border-radius: 5px;
+  background:#FFFFFF;
+  border: 1px solid #cccccc;
 }
 
-.mainContent .builder{
-  margin-left:2%;
-  margin-right:2%
-}
-
-.mainContent .enhancer{
-  margin-left:2%;
-  margin-right:2%
-}
-
-.mainContent h1{
+.content h1{
   font-family: Raleway;
   font-style: normal;
   font-weight: 600;
-  font-size: 42px;
+  font-size: 36px;
   line-height: 56px;
 }
 
-.mainContent h3{
+.content h3{
   font-family: Oxygen;
   font-style: normal;
   font-size: 20px;
-  line-height: 56px;
+  line-height: 25px;
 }
 
-.mainContent h2{
+.content h4{
+  font-family: Oxygen;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.content h2{
   font-family: Raleway;
   font-style: normal;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 30px; 
   font-weight: 300;
   margin-top:20px;
-  margin-bottom:-30px;
+  margin-bottom: 10px;
   border-bottom: 2px solid currentColor;
   display: inline-block;
 }
 
-.mainContent h2:hover{
+.content h2:hover{
   color: #7a33ff !important;
   cursor: pointer;
 }
 
 .navbar #logo:hover{
   cursor: pointer;
+}
+
+.homepage .text{
+  float:left;
+  width: 60%;
+  display: block;
+}
+
+.homepage .image{
+  margin-top: 10vh;
+  float: right;
+  height:100px;
+  width: 40%;
+  display: block;
+}
+
+.homepage .homeimage{
+  height: 400%;
+}
+
+.formheader p{
+  padding-top: 10px;
+  margin-left: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 100px;
+}
+.formheader .name{
+  width: 55%;
+  display: block;
+  float: left;
+}
+
+.formheader .holdings{
+  width: 20%;
+  display: block;
+  float: left;
+}
+
+.formheader{
+  width: 100%;
+  height: 50px;
+  position:relative;
+  border-bottom: 1px solid #cccccc;
+}
+
+.btn-add{
+  position: relative;
+  margin: 20px 20px 20px 20px;
+  height: 25px;
+  width: 100px;
+  background-color: #cccccc !important;
+  text-align: center;
+  line-height: 0px !important;
+}
+
+.btn-add p{
+  margin: 0px;
+  padding: 0px;
+  color: #ffffff;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+.btn-remove{
+  margin: 20px 20px 20px 80px;
+  height: 25px;
+  width: 100px;
+  background-color: #cccccc !important;
+  text-align: center;
+  line-height: 0px !important;
+}
+
+.btn-remove p{
+  margin: 0px;
+  padding: 0px;
+  color: #ffffff;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+.dropdown{
+  position: relative !important;
+  display: block !important;
+  float: left;
+  width: 50% !important;
+  top: 0px;
+}
+
+.select{
+  position: relative !important;
+  display: block !important;
+  float: left;
+  width: 20% !important;
+  margin-left: 6.5% !important;
+  top: 0px;
+}
+
+.stock-select{
+  display: block;
+  float: left;
+  width: 100% !important;
+  top: 20px;
+  margin: 0px 50px 20px 20px; 
+  height: 30px !important;
+  font-size: 12px !important;
+}
+
+.formfields .form-control{
+  position:relative;
+  left: 30px !important;
+  top: 20px !important;
+  margin: 0px 50px 20px 00px; 
+  height: 30px !important;
+  font-size: 12px !important;
+}
+
+.formfield{
+  height: 70px;
+  border-bottom: 1px solid #cccccc;
 }

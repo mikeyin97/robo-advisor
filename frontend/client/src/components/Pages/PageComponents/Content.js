@@ -1,8 +1,9 @@
 import React from 'react';
-import Homepage from "./Homepage";
-import Analyzer from "./Analyzer";
-import Enhancer from "./Enhancer";
-import Builder from "./Builder";
+import Homepage from "../Homepage";
+import Analyzer from "../Analyzer";
+import Enhancer from "../Enhancer";
+import Builder from "../Builder";
+import Portfolios from "../Portfolios";
 
 class Content extends React.Component {
   constructor(props) {
@@ -20,12 +21,16 @@ class Content extends React.Component {
       content = <Enhancer></Enhancer>
     } else if (this.props.page == "Builder") {
       content = <Builder></Builder>
+    } else if (this.props.page == "My Portfolios") {
+      content = <Portfolios></Portfolios>
     } 
 
     return (
-        <div class = "mainContent">
-          {content}          
-        </div>  
+        <div class = "background">
+          <div class = "mainContent">
+            {content}          
+          </div>  
+        </div>
     );
   }
 }
