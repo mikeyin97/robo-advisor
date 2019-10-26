@@ -7,6 +7,7 @@ very light purple #faf5fc
 dark gray #333333
 outline and lines #cccccc
 white #FFFFFF
+blue #7190FC
 
 */
 p {
@@ -221,6 +222,44 @@ p {
   border: 1px solid #cccccc;
 }
 
+.formbreak{
+  margin-top:20px;
+}
+
+.quesform{
+  margin-top: -0.1px;
+  margin-right:20px;
+  margin-left:10px;
+  height: 80px;
+  border-radius: 5px;
+  background:#FFFFFF;
+  border: 1px solid #cccccc;
+}
+
+.question{
+  font-family: 'Oxygen', sans-serif;
+  margin-left: 20px;
+  line-height: 80px;
+}
+
+.questiontext{ 
+  display: inline-block;
+  width: 70%;
+}
+
+.questionresponse{
+  display: inline-block;
+  width: 30%;
+}
+
+.question-form{
+  width: 80% !important;
+}
+
+.footer{
+  height: 30px;
+}
+
 .content h1{
   font-family: Raleway;
   font-style: normal;
@@ -296,6 +335,7 @@ p {
 }
 
 .formheader .holdings{
+  padding-left: 10px;
   width: 20%;
   display: block;
   float: left;
@@ -382,4 +422,18 @@ p {
 .formfield{
   height: 70px;
   border-bottom: 1px solid #cccccc;
+}
+
+.question-form{
+  font-size: 12px !important;
+}
+
+.btn-form-submit{
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  background-color: #7190FC !important;
+  font-family: Oxygen;
+  color: #ffffff !important;
+  width: 15%;
 }

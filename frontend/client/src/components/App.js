@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       user: "Josh Kang",
-      page: "Analyzer",
+      page: "Enhancer",
     };
     this.handlePageChange = this.handlePageChange.bind(this);
     this.handleSignOut = this.handleSignOut.bind(this);

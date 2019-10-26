@@ -1,10 +1,18 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Formunit from './Formunit';
+import Questionunit from './Questionunit';
 
 class Wholeform extends React.Component {
   constructor(props) {
     super(props);
+
+    let questionFields = [];
+    for (var j = 0; j < props.questions.length; j++) {
+      let question = this.props.questions[j][0];
+      questionFields.push({question: question, value: ''})
+    }
+
     this.state = {
       formFields: [
         {
@@ -13,31 +21,45 @@ class Wholeform extends React.Component {
           value: '',
         }
       ],
+      questionFields: questionFields,
       currId: 1,
     };
 
     this.addFormField = this.addFormField.bind(this);
     this.delFormField = this.delFormField.bind(this);
+    this.submitForm = this.submitForm.bind(this);
     this.handleFormChange = this.handleFormChange.bind(this);
   }
 
   handleFormChange(event, id){
+    console.log(id);
     let formFields = this.state.formFields;
+    let questionFields = this.state.questionFields;
     let field = event.target.name;
+    let foundIndex;
+    let formField;
+    let questionField;
 
-    let foundIndex = formFields.findIndex(x => x.id == id);
-    let formField = formFields[foundIndex];
-    
     if (field === "stockField") {
+      foundIndex = formFields.findIndex(x => x.id == id);
+      formField = formFields[foundIndex];
       formField.stock = event.target.value;
+      formFields[foundIndex] = formField;
     } else if (field === "valueField") {
+      foundIndex = formFields.findIndex(x => x.id == id);
+      formField = formFields[foundIndex];
       formField.value = event.target.value;
+      formFields[foundIndex] = formField;
+    } else if (field === "questionField") {
+      foundIndex = questionFields.findIndex(x => x.question == id);
+      questionField = questionFields[foundIndex];
+      questionField.value = event.target.value;
+      questionFields[foundIndex] = questionField;
     } 
 
-    formFields[foundIndex] = formField;
-
     this.setState({
-      formFields
+      formFields,
+      questionFields
     });
   }
 
@@ -56,21 +78,30 @@ class Wholeform extends React.Component {
   }
 
   delFormField(id) {
-    console.log(id);
     let formFields = this.state.formFields;
     formFields.splice(formFields.findIndex(function(i){
       return i.id === id;
     }), 1);
-    console.log(formFields);
     this.setState({
       formFields
     })
   }
 
+  submitForm() {
+    const formFields = this.state.formFields;
+    const quesFields = this.state.questionFields;
+    // submit
+
+    console.log({
+      formFields, 
+      quesFields,
+    })
+  }
+
   render() {
-    var items = [];
-    for (var i = 0; i < this.state.formFields.length; i++) {
-      items.push(
+    let stockItems = [];
+    for (let i = 0; i < this.state.formFields.length; i++) {
+      stockItems.push(
         <Formunit 
           fieldData={this.state.formFields[i]} 
           delField={this.delFormField}
@@ -79,23 +110,50 @@ class Wholeform extends React.Component {
       )
     }
 
-    return (
-        <div class = "portform">
-          <div class = "formheader">
-            <p class = "name">Stock Name</p>
-            <p class = "holdings">Stock Holdings ($)</p>
-          </div>
-          <div class = "formfields">
-            {items}
-          </div>
-          <div class = "formfooter">
-              <Button onClick={this.addFormField} variant="add" type="button">
-                <p>Add</p>
-              </Button>
-
-              
-          </div>
+    let stockForm; 
+    if (this.props.hasStocks) {
+      stockForm = 
+      <div class = "portform">
+        <div class = "formheader">
+          <p class = "name">Stock Name</p>
+          <p class = "holdings">Stock Holdings ($)</p>
         </div>
+        <div class = "formfields">
+          {stockItems}
+        </div>
+        <div class = "formfooter">
+            <Button onClick={this.addFormField} variant="add" type="button">
+              <p>Add</p>
+            </Button>
+        </div>
+      </div>
+    }
+
+    let quesItems = [];
+    for (let j = 0; j < this.state.questionFields.length; j++) {
+      quesItems.push(
+        <Questionunit 
+          question={this.state.questionFields[j]}
+          handleFormChange={this.handleFormChange}>
+        </Questionunit>
+      )
+    }
+
+    return (
+      <div class = "wholeform">
+        {stockForm}
+
+        <div class = "formbreak">
+        </div>
+
+        <div class = "quesfields">
+          {quesItems}
+        </div>
+
+        <Button variant="form-submit" type="button" onClick={this.submitForm}>
+          Submit
+        </Button>
+      </div>          
     );
   }
 }

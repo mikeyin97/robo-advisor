@@ -92,7 +92,7 @@ class SignupForm extends React.Component {
             </Form.Group>
             <Form.Group value={this.state.password} onChange={this.handleChange} onClick={this.handleFormClick}>
               <Form.Label>Password (minimum 6 characters)</Form.Label>
-              <Form.Control required="required" type="password" name="password" pattern=".{6,}"/>
+              <Form.Control required="required" type="password" name="password"/>
             </Form.Group>
             <div className="buttoncontainer">
               <Button variant="primary" type="button" onClick={this.submitSignup}>
