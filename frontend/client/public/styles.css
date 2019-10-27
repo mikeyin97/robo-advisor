@@ -8,6 +8,7 @@ dark gray #333333
 outline and lines #cccccc
 white #FFFFFF
 blue #7190FC
+red #fb4c19
 
 */
 p {
@@ -257,7 +258,9 @@ p {
 }
 
 .footer{
-  height: 30px;
+  height: 100px;
+  position: block;
+  bottom: 0;
 }
 
 .content h1{
@@ -353,7 +356,7 @@ p {
   margin: 20px 20px 20px 20px;
   height: 25px;
   width: 100px;
-  background-color: #cccccc !important;
+  background-color: #909090 !important;
   text-align: center;
   line-height: 0px !important;
 }
@@ -369,8 +372,8 @@ p {
 .btn-remove{
   margin: 20px 20px 20px 80px;
   height: 25px;
-  width: 100px;
-  background-color: #cccccc !important;
+  width: 130px;
+  background-color: #909090 !important;
   text-align: center;
   line-height: 0px !important;
 }
@@ -429,11 +432,67 @@ p {
 }
 
 .btn-form-submit{
-  float: right;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: #7190FC !important;
   font-family: Oxygen;
   color: #ffffff !important;
   width: 15%;
+  float: right;
+}
+
+.alert{
+  position: relative;
+  height: 40px !important;
+  margin-right: 20px;
+  font-family: Oxygen;
+  float: left;
+  line-height: 1 !important;
+  margin: 0px;
+}
+
+.errorText{
+  height: 40px !important;
+  color: #fb4c19;
+  width: 81%;
+  margin-left: 20px;
+  margin-top: 30px;
+  font-family: Oxygen;
+  float: left;
+}
+
+
+.errorText2{
+  color: #fb4c19;
+  font-family: Oxygen;
+  float: right;
+}
+
+.graph{
+  height: 600px;
+  background-color: #FFFFFF;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.text-center {
+  margin: auto;
+  position: relative;
+  top: 285px; left: 0; bottom: 0; right: 0;
+}
+
+#erroricon{
+  height: 25px;
+  margin-top: -5px;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+#erroricon2{
+  height: 25px;
+  margin-top: -5px;
+  margin-right: 10px;
+  margin-left: -10px;
 }

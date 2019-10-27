@@ -4,13 +4,14 @@ import Header from "./Pages/PageComponents/Header";
 import Sidebar from "./Pages/PageComponents/Sidebar";
 import Content from "./Pages/PageComponents/Content";
 import SignupForm from "./Login/SignupForm";
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: "Josh Kang",
-      page: "Enhancer",
+      user: "Mike Yin",
+      page: "Home",
     };
     this.handlePageChange = this.handlePageChange.bind(this);
     this.handleSignOut = this.handleSignOut.bind(this);
