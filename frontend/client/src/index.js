@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import Signin from './components/Signin';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, IndexRoute, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 const routing = (
   <Router>
@@ -16,7 +16,5 @@ const routing = (
   </Router>
 )
 
-// make signup the default
-// if not logged in, redirect to signup
 ReactDOM.render(routing, document.getElementById('root'));
 

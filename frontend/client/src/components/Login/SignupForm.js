@@ -67,7 +67,6 @@ class SignupForm extends React.Component {
   }
 
   submitSignup(){
-    console.log("B")
     let error = {
       email: "",
       password: "",  
@@ -91,15 +90,14 @@ class SignupForm extends React.Component {
   }
 
   handleSubmit(e){
-    console.log("A")
     e.preventDefault()
     if (this.state.error.email === "" && this.state.error.password === "") {
+      this.props.handleSignIn(this.state.user.name);
       // post, etc, etc. , update state and upwards loading, etc... (while in loading state, disable form fields)
       // check form errors here - email in use and wrong username password combo and update error field on form. 
       // can use a spinner button
-      console.log(this.state.user);
+      // post here and get results
     }
-    this.props.handleSignIn(this.state.user.name);
   }
 
   changeForm(){

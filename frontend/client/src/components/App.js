@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Header from "./Pages/PageComponents/Header";
 import Sidebar from "./Pages/PageComponents/Sidebar";
 import Content from "./Pages/PageComponents/Content";
-import { Redirect, Route, withRouter } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {

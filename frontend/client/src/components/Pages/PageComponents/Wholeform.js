@@ -105,6 +105,9 @@ class Wholeform extends React.Component {
       if (formFields[i].value === '') {
         error = 'Error: Stock holdings cannot be empty.';
       }
+      if (isNaN(formFields[i].value)) {
+        error = 'Error: Stock holdings must be a numeric value';
+      }
       if (formFields[i].stock === '') {
         error = 'Error: Please select a valid stock name.';
       }

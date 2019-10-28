@@ -1,8 +1,5 @@
 // client/src/App.js
 import React, { Component } from "react";
-import Header from "./Pages/PageComponents/Header";
-import Sidebar from "./Pages/PageComponents/Sidebar";
-import Content from "./Pages/PageComponents/Content";
 import SignupForm from "./Login/SignupForm";
 import { withRouter, Redirect, Route } from 'react-router-dom'
 class App extends Component {
