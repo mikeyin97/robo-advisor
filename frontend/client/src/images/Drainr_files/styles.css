@@ -1,0 +1,498 @@
+/********************* Colour reference chart****************
+*************************** comment ********* colour ******** 
+
+dark purple #411081
+light purple #ede2fc
+very light purple #faf5fc
+dark gray #333333
+outline and lines #cccccc
+white #FFFFFF
+blue #7190FC
+red #fb4c19
+
+*/
+p {
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+}
+
+#app {
+  background-color: #faf5fc;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  height: 100%;
+}
+
+.navbar-custom {
+  background-color: #411081;
+  height: 50px;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  position: fixed !important;
+}
+
+.navbar-custom .nav-item {
+  color: #faf5fc;
+  padding-top: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 16%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #faf5fc;
+  padding-top: 70px;
+  border-right: 1px solid #cccccc;
+}
+
+.sidenav .btn {
+  border-radius: 0px;
+  padding: 5px 10px 5px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333333;
+  font-family: 'Oxygen', sans-serif;
+  display: block;
+  background-color: #faf5fc;
+  border: none;
+  text-align: left !important;
+}
+
+.sidenav .btn p{
+  margin-left:10px;
+  padding-left: 30px;
+}
+
+.sidenav .btn:hover {
+  background-color: #ede2fc !important;
+  color: #411081 !important;
+}
+
+.sidenav .btn .selected{
+  background-color: #ede2fc !important;
+  color: #411081 !important;
+}
+  
+.nonlogout{
+  margin-top: 5px !important;
+}
+
+.logout{
+  margin-top: 25px !important;
+} 
+
+.iconimg{
+  margin-top:-2px;
+}
+
+.btn img{
+  float:left;
+}
+
+.submit{
+  width: 10% !important;
+}
+
+.signinbackground{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(180deg, #3700AD 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #4C5896 0%, rgba(255, 255, 255, 0) 100%), #9FA6E6;
+}
+
+.signinbackground #logo{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+  width: 20%;
+  margin-bottom: 4%;
+}
+
+.loginbox{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  margin-top: 0;
+}
+
+.loginbox h1{
+  top: 20px;
+  padding-top: 30px;
+  font-family: 'Oxygen', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.loginbox .signupform{
+  text-align: left;
+  margin: 5px auto;
+  width: 80%;
+  font-family: 'Oxygen', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom:10px;
+  border-bottom:1px solid #cccccc;
+}
+
+.loginbox .form-group{
+  margin: 0px;
+}
+
+.loginbox .form-label{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+}
+
+.loginbox .buttoncontainer{
+  text-align: center;
+}
+
+.loginbox .btn{
+  width:20vw;
+  margin-top: 25px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom:10px;
+}
+
+.loginbox p {
+  font-family: 'Oxygen', sans-serif;
+}
+
+.loginbox#signup{
+  height:450px;
+}
+
+.loginbox#login{
+  height:370px;
+}
+
+.loginbox .errorText{
+  color:red;
+}
+
+.background{
+  float: left;
+  width: 100%;
+  height: 100vh;
+  background-color: #faf5fc;
+  overflow: scroll;
+ 
+}
+
+.mainContent{
+  float: left;
+  width: 84%;
+  margin-left: 16%;
+  height: 100vh;
+  background-color: #faf5fc;
+  padding-top: 70px;
+  height: 100%;
+}
+
+.mainContent .content{
+  margin-left:3%;
+  margin-right:3%
+}
+
+.portform{
+  margin-top:20px;
+  margin-right:20px;
+  margin-left:10px;
+  border-radius: 5px;
+  background:#FFFFFF;
+  border: 1px solid #cccccc;
+}
+
+.formbreak{
+  margin-top:20px;
+}
+
+.quesform{
+  margin-top: -0.1px;
+  margin-right:20px;
+  margin-left:10px;
+  height: 80px;
+  border-radius: 5px;
+  background:#FFFFFF;
+  border: 1px solid #cccccc;
+}
+
+.question{
+  font-family: 'Oxygen', sans-serif;
+  margin-left: 20px;
+  line-height: 80px;
+}
+
+.questiontext{ 
+  display: inline-block;
+  width: 70%;
+}
+
+.questionresponse{
+  display: inline-block;
+  width: 30%;
+}
+
+.question-form{
+  width: 80% !important;
+}
+
+.footer{
+  height: 100px;
+  position: block;
+  bottom: 0;
+}
+
+.content h1{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 56px;
+}
+
+.content h3{
+  font-family: Oxygen;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.content h4{
+  font-family: Oxygen;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.content h2{
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 30px; 
+  font-weight: 300;
+  margin-top:20px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+}
+
+.content h2:hover{
+  color: #7a33ff !important;
+  cursor: pointer;
+}
+
+.navbar #logo:hover{
+  cursor: pointer;
+}
+
+.homepage .text{
+  float:left;
+  width: 60%;
+  display: block;
+}
+
+.homepage .image{
+  margin-top: 10vh;
+  float: right;
+  height:100px;
+  width: 40%;
+  display: block;
+}
+
+.homepage .homeimage{
+  height: 400%;
+}
+
+.formheader p{
+  padding-top: 10px;
+  margin-left: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 100px;
+}
+.formheader .name{
+  width: 55%;
+  display: block;
+  float: left;
+}
+
+.formheader .holdings{
+  padding-left: 10px;
+  width: 20%;
+  display: block;
+  float: left;
+}
+
+.formheader{
+  width: 100%;
+  height: 50px;
+  position:relative;
+  border-bottom: 1px solid #cccccc;
+}
+
+.btn-add{
+  position: relative;
+  margin: 20px 20px 20px 20px;
+  height: 25px;
+  width: 100px;
+  background-color: #909090 !important;
+  text-align: center;
+  line-height: 0px !important;
+}
+
+.btn-add p{
+  margin: 0px;
+  padding: 0px;
+  color: #ffffff;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+.btn-remove{
+  margin: 20px 20px 20px 80px;
+  height: 25px;
+  width: 130px;
+  background-color: #909090 !important;
+  text-align: center;
+  line-height: 0px !important;
+}
+
+.btn-remove p{
+  margin: 0px;
+  padding: 0px;
+  color: #ffffff;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+.dropdown{
+  position: relative !important;
+  display: block !important;
+  float: left;
+  width: 50% !important;
+  top: 0px;
+}
+
+.select{
+  position: relative !important;
+  display: block !important;
+  float: left;
+  width: 20% !important;
+  margin-left: 6.5% !important;
+  top: 0px;
+}
+
+.stock-select{
+  display: block;
+  float: left;
+  width: 100% !important;
+  top: 20px;
+  margin: 0px 50px 20px 20px; 
+  height: 30px !important;
+  font-size: 12px !important;
+}
+
+.formfields .form-control{
+  position:relative;
+  left: 30px !important;
+  top: 20px !important;
+  margin: 0px 50px 20px 00px; 
+  height: 30px !important;
+  font-size: 12px !important;
+}
+
+.formfield{
+  height: 70px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.question-form{
+  font-size: 12px !important;
+}
+
+.btn-form-submit{
+  margin-right: 20px;
+  margin-top: 30px;
+  background-color: #7190FC !important;
+  font-family: Oxygen;
+  color: #ffffff !important;
+  width: 15%;
+  float: right;
+}
+
+.alert{
+  position: relative;
+  height: 40px !important;
+  margin-right: 20px;
+  font-family: Oxygen;
+  float: left;
+  line-height: 1 !important;
+  margin: 0px;
+}
+
+.errorText{
+  height: 40px !important;
+  color: #fb4c19;
+  width: 81%;
+  margin-left: 20px;
+  margin-top: 30px;
+  font-family: Oxygen;
+  float: left;
+}
+
+
+.errorText2{
+  color: #fb4c19;
+  font-family: Oxygen;
+  float: right;
+}
+
+.graph{
+  height: 600px;
+  background-color: #FFFFFF;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.text-center {
+  margin: auto;
+  position: relative;
+  top: 285px; left: 0; bottom: 0; right: 0;
+}
+
+#erroricon{
+  height: 25px;
+  margin-top: -5px;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+#erroricon2{
+  height: 25px;
+  margin-top: -5px;
+  margin-right: 10px;
+  margin-left: -10px;
+}

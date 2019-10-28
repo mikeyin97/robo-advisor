@@ -67,6 +67,7 @@ class SignupForm extends React.Component {
   }
 
   submitSignup(){
+    console.log("B")
     let error = {
       email: "",
       password: "",  
@@ -90,6 +91,7 @@ class SignupForm extends React.Component {
   }
 
   handleSubmit(e){
+    console.log("A")
     e.preventDefault()
     if (this.state.error.email === "" && this.state.error.password === "") {
       // post, etc, etc. , update state and upwards loading, etc... (while in loading state, disable form fields)
@@ -97,6 +99,7 @@ class SignupForm extends React.Component {
       // can use a spinner button
       console.log(this.state.user);
     }
+    this.props.handleSignIn(this.state.user.name);
   }
 
   changeForm(){
@@ -150,7 +153,7 @@ class SignupForm extends React.Component {
               </Button>
             </div>
           </Form>
-          <p>Have an account? <a href='#' onClick={this.changeForm}>Log in</a></p>
+          <p>Have an account? <a href="javascript:void(0)" onClick={this.changeForm}>Log in</a></p>
         </div>
     } else {
       if (this.state.error.password) {
@@ -178,7 +181,7 @@ class SignupForm extends React.Component {
               </Button>
             </div>
           </Form>
-          <p>Need an account? <a href='#' onClick={this.changeForm}>Sign up</a></p>
+          <p>Need an account? <a href="javascript:void(0)" onClick={this.changeForm}>Sign up</a></p>
         </div>
     }
     return (

@@ -186,6 +186,7 @@ class Wholeform extends React.Component {
         loading: true,
         showGraph: true,
         action: "Update",
+        error: '',
       });
       // change this timeout to waiting for response
       setTimeout(function(){

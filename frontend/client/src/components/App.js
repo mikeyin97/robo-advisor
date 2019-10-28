@@ -3,29 +3,24 @@ import React, { Component } from "react";
 import Header from "./Pages/PageComponents/Header";
 import Sidebar from "./Pages/PageComponents/Sidebar";
 import Content from "./Pages/PageComponents/Content";
-import SignupForm from "./Login/SignupForm";
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Redirect, Route, withRouter } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: "Mike Yin",
       page: "Home",
+      signedOut: false,
     };
     this.handlePageChange = this.handlePageChange.bind(this);
     this.handleSignOut = this.handleSignOut.bind(this);
     this.setState = this.setState.bind(this);
   }
 
-  handleSignIn() {
-    this.setState({user: "Josh Kang"});
-  }
-
   handleSignOut = async() => {
     const set = this.setState
     setTimeout(function(){
-      set({user: null});
+      set({signedOut: true});
     }, 150);
   }
 
@@ -34,25 +29,22 @@ class App extends Component {
   }
   
   render() {
-    if (this.state.user) {
+    if ((((this.props || {}).location|| {}).state || {}).name && !this.state.signedOut) {
       return <div id="app">
-        <Header class="header-component" currentUser={this.state.user} handlePageChange={this.handlePageChange} ></Header>
+        <Header class="header-component" currentUser={this.props.location.state.name} handlePageChange={this.handlePageChange} ></Header>
         <Sidebar class="sidebar-component" handlePageChange={this.handlePageChange} handleSignOut={this.handleSignOut}></Sidebar>
         <Content class="content-component" handlePageChange={this.handlePageChange}
           page={this.state.page} 
-          currentUser={this.state.user}>  
+          currentUser={this.props.name}>  
         </Content>
       </div>
     } else {
       return <div id="app">
-        <SignupForm class="logsign"></SignupForm>
+        <Redirect to='/signin' />
       </div>
     }
   }
-
-
-
 }
 
-export default App;
+export default withRouter(App);
 
